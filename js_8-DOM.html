@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Neste exemplo:
+
+Adicionamos um campo de entrada (<input>) e um botão (<button>) no HTML.
+Adicionamos um identificador (id) ao campo de entrada para que possamos acessá-lo usando o 
+método getElementById do DOM.
+Criamos uma função exibirMensagem no JavaScript que é chamada quando o botão é clicado.
+Dentro da função, usamos document.getElementById para obter o valor do campo de entrada.
+Exibimos a mensagem resultante ou uma mensagem de fallback em um elemento <p> com um identificador "resultado".
+Este exemplo mostra como você pode interagir com o DOM para obter entradas do usuário e exibir resultados dinâmicos 
+na página. -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo com DOM em JavaScript</title>
+</head>
+<body>
+
+  <h1>Exemplo com DOM em JavaScript</h1>
+
+  <label for="nomeInput">Por favor, digite seu nome:</label>
+  <input type="text" id="nomeInput">
+  <button onclick="exibirMensagem()">Clique aqui</button>
+
+  <script>
+    function exibirMensagem() {
+      // Obtém o valor do input pelo DOM
+      let nomeUsuario = document.getElementById("nomeInput").value;
+
+      // Verifica se o usuário inseriu um nome
+      if (nomeUsuario !== "") {
+        // Exibe uma mensagem usando o DOM
+        document.getElementById("resultado").innerText = "Olá, " + nomeUsuario + "! Bem-vindo ao nosso exemplo.";
+      } else {
+        // Exibe uma mensagem de fallback usando o DOM
+        document.getElementById("resultado").innerText = "Você não forneceu um nome. Faremos assim mesmo!";
+      }
+    }
+  </script>
+
+  <p id="resultado"></p>
+
+</body>
+</html>

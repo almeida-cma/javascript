@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Neste exemplo:
+
+Um botão é criado com um evento onclick.
+Um campo de entrada de texto é criado com eventos onmouseover, onmouseout, onfocus, onblur, e onkeypress.
+Um parágrafo é criado com um evento onchange.
+Esses eventos acionam funções JavaScript correspondentes que realizam diferentes ações quando os eventos ocorrem. -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Manipulação de Eventos em JavaScript</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Manipulação de Eventos em JavaScript</h1>
+
+  <button id="meuBotao" onclick="mostrarAlerta()">Clique aqui</button>
+  <input type="text" id="meuInput" onmouseover="realcarElemento(this)" onmouseout="desrealcarElemento(this)" onfocus="aplicarFoco(this)" onblur="removerFoco(this)" onkeypress="mostrarTeclaPressionada(event)">
+  <p id="meuParagrafo" onchange="alterarParagrafo()">Mude-me!</p>
+
+  <script>
+    // Função para mostrar alerta no clique do botão
+    function mostrarAlerta() {
+      alert("Você clicou no botão!");
+    }
+
+    // Função para realçar o elemento no hover (mouseover)
+    function realcarElemento(elemento) {
+      elemento.classList.add("highlight");
+    }
+
+    // Função para remover o realce no hover out (mouseout)
+    function desrealcarElemento(elemento) {
+      elemento.classList.remove("highlight");
+    }
+
+    // Função para aplicar foco no elemento (onfocus)
+    function aplicarFoco(elemento) {
+      elemento.value = "Focado!";
+    }
+
+    // Função para remover o foco do elemento (onblur)
+    function removerFoco(elemento) {
+      elemento.value = "Perdeu o foco.";
+    }
+
+    // Função para mostrar a tecla pressionada (onkeypress)
+    function mostrarTeclaPressionada(event) {
+      alert("Tecla pressionada: " + String.fromCharCode(event.keyCode));
+    }
+
+    // Função para alterar o conteúdo do parágrafo (onchange)
+    function alterarParagrafo() {
+      document.getElementById("meuParagrafo").innerText = "O valor foi alterado!";
+    }
+  </script>
+
+</body>
+</html>

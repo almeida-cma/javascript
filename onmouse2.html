@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Exemplo de Eventos de Clique</title>
+    <style>
+        #botaoClique {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #botaoClique:hover {
+            background-color: #2980b9;
+        }
+
+        #botaoClique:active {
+            background-color: #1f618d;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Exemplo de Eventos de Clique</h1>
+
+<button id="botaoClique" onmousedown="alterarCorPressionado()" onmouseup="alterarCorLiberado()" onclick="realizarAcao()">Clique Aqui!</button>
+
+<script>
+    function alterarCorPressionado() {
+        document.getElementById('botaoClique').style.backgroundColor = '#1f618d';
+    }
+
+    function alterarCorLiberado() {
+        document.getElementById('botaoClique').style.backgroundColor = '#2980b9';
+    }
+
+    function realizarAcao() {
+        alert('Ação realizada!');
+    }
+</script>
+
+</body>
+</html>

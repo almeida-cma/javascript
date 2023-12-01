@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Exemplo de onchange</title>
+    <script>
+        function selecionarOpcao() {
+            var selectElement = document.getElementById('meuSelect');
+            var opcaoSelecionada = selectElement.options[selectElement.selectedIndex].text;
+            alert('Opção selecionada: ' + opcaoSelecionada);
+        }
+    </script>
+</head>
+<body>
+
+<h1>Exemplo de onchange</h1>
+
+<p>Escolha uma opção:</p>
+
+<select id="meuSelect" onchange="selecionarOpcao()">
+    <option value="opcao1">Opção 1</option>
+    <option value="opcao2">Opção 2</option>
+    <option value="opcao3">Opção 3</option>
+</select>
+
+</body>
+</html>

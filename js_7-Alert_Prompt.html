@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Neste exemplo:
+
+Utilizamos alert para exibir uma mensagem de boas-vindas.
+Em seguida, utilizamos prompt para solicitar ao usuário que insira seu nome.
+Verificamos se o usuário inseriu um nome. Se sim, exibimos uma mensagem personalizada com o nome; 
+caso contrário, informamos que nenhum nome foi fornecido.
+Por favor, note que o uso de prompt e alert pode variar dependendo do contexto e das necessidades 
+do seu aplicativo.  -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo com Alert e Prompt em JavaScript</title>
+</head>
+<body>
+
+  <h1>Exemplo com Alert e Prompt em JavaScript</h1>
+
+  <script>
+    // Exemplo com alert
+    alert("Bem-vindo! Este é um exemplo com alert.");
+
+    // Exemplo com prompt
+    let nomeUsuario = prompt("Por favor, digite seu nome:");
+    
+    // Verifica se o usuário inseriu um nome
+    if (nomeUsuario !== null && nomeUsuario !== "") {
+      alert("Olá, " + nomeUsuario + "! Bem-vindo ao nosso exemplo.");
+    } else {
+      alert("Você não forneceu um nome. Faremos assim mesmo!");
+    }
+  </script>
+
+</body>
+</html>

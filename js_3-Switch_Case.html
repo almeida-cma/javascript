@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Neste exemplo:
+
+Declaramos uma variável diaDaSemana.
+Utilizamos a estrutura switch case para comparar o valor da variável diaDaSemana com diferentes casos.
+Cada caso contém um bloco de código a ser executado se a condição for verdadeira.
+O bloco default é executado se nenhum dos casos corresponder ao valor da variável.
+Você pode ajustar o valor da variável diaDaSemana para ver como diferentes casos são acionados. -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Switch Case em JavaScript</title>
+</head>
+<body>
+
+  <h1>Switch Case em JavaScript</h1>
+
+  <script>
+    // Exemplo de variável
+    let diaDaSemana = "segunda";
+
+    // Estrutura switch case
+    switch (diaDaSemana) {
+      case "segunda":
+        document.write("<p>É segunda-feira. Comece a semana com energia!</p>");
+        break;
+
+      case "terça":
+        document.write("<p>Terça-feira: dia de trabalho.</p>");
+        break;
+
+      case "quarta":
+        document.write("<p>Quarta-feira: metade da semana!</p>");
+        break;
+
+      case "quinta":
+        document.write("<p>Quinta-feira: quase lá, fim de semana chegando.</p>");
+        break;
+
+      case "sexta":
+        document.write("<p>Sexta-feira: finalmente!</p>");
+        break;
+
+      default:
+        document.write("<p>Fim de semana!</p>");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Neste exemplo:
+
+Declaramos uma variável contador e inicializamos com o valor 1.
+Utilizamos uma estrutura de repetição do-while para executar o bloco de código dentro do do e depois verificar a condição no while.
+Dentro do bloco do, escrevemos uma mensagem que inclui o valor atual do contador.
+Incrementamos o contador dentro do bloco do.
+A condição no while é verificada após a execução do bloco, garantindo que o bloco seja executado pelo menos uma vez.
+Este é um exemplo útil quando você precisa garantir que um bloco de código seja executado pelo menos uma vez, independentemente da condição inicial. -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Estrutura de Repetição Do-While em JavaScript</title>
+</head>
+<body>
+
+  <h1>Estrutura de Repetição Do-While em JavaScript</h1>
+
+  <script>
+    // Exemplo de variável
+    let contador = 1;
+
+    // Estrutura de repetição do-while
+    do {
+      document.write("<p>Contagem: " + contador + "</p>");
+
+      // Incrementa o contador
+      contador++;
+    } while (contador <= 5);
+  </script>
+
+</body>
+</html>

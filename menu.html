@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags para definições iniciais -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
+    <title>Menu Responsivo com Ícone Hambúrguer</title>
+
+    <!-- Estilos em CSS -->
+    <style>
+        /* Estilo geral para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            /* Remove margens padrão */
+            padding: 0;
+            /* Remove preenchimentos padrão */
+        }
+
+        /* Estilo para o cabeçalho (barra superior) */
+        header {
+            background-color: #333;
+            /* Cor de fundo */
+            color: white;
+            /* Cor do texto */
+            padding: 15px;
+            /* Espaçamento interno */
+            text-align: center;
+            /* Alinhamento do texto */
+        }
+
+        /* Estilo para o menu de navegação */
+        nav {
+            background-color: #444;
+            /* Cor de fundo */
+            padding: 10px;
+            /* Espaçamento interno */
+            box-sizing: border-box;
+            /* Garante que a caixa do modelo inclua as bordas */
+        }
+
+        /* Estilo para os links no menu de navegação */
+        nav a {
+            display: inline-block;
+            /* Exibido em linha com um bloco de caixa */
+            color: white;
+            /* Cor do texto */
+            text-decoration: none;
+            /* Remove a decoração do link (sublinhado) */
+            padding: 10px;
+            /* Espaçamento interno */
+        }
+
+        /* Estilo para o ícone de hambúrguer */
+        #menu-icon {
+            display: none;
+            /* Inicialmente escondido em telas maiores */
+            cursor: pointer;
+            /* Mostra que o elemento é clicável */
+            padding: 10px;
+            /* Espaçamento interno */
+        }
+
+        /* Media query para estilos responsivos */
+        @media only screen and (max-width: 768px) {
+
+            /* Estilo para os links no menu quando a tela é menor ou igual a 768 pixels */
+            nav a {
+                display: block;
+                /* Exibido como bloco para ocupar a largura total */
+                border-bottom: 1px solid #666;
+                /* Adiciona uma linha divisória entre os itens do menu */
+            }
+
+            /* Exibe o ícone de hambúrguer quando a tela é menor ou igual a 768 pixels */
+            #menu-icon {
+                display: block;
+            }
+
+            /* Esconde o menu de navegação em telas menores para controlar a visibilidade usando o ícone de hambúrguer */
+            #desktop-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cabeçalho da página -->
+    <header>
+        <!-- Ícone de hambúrguer (inicialmente escondido em telas maiores) -->
+        <span id="menu-icon">&#9776; Menu</span>
+        <!-- Título do site -->
+        <h1>Meu Site</h1>
+    </header>
+
+    <!-- Menu de navegação (sempre visível, mas com estilo diferente em telas menores) -->
+    <nav id="desktop-menu">
+        <!-- Links do menu -->
+        <a href="#">Home</a>
+        <a href="#">Sobre</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+    </nav>
+
+    <!-- Script JavaScript para manipulação do menu -->
+    <script>
+        // Adiciona um ouvinte de evento ao ícone de hambúrguer
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            // Obtém a referência ao menu de navegação
+            var nav = document.getElementById('desktop-menu');
+            // Alterna a visibilidade do menu
+            if (nav.style.display === 'block') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'block';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

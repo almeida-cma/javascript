@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Neste exemplo:
+
+Declaramos uma variável temperatura e usamos uma estrutura if, else if, else para exibir mensagens diferentes com base na temperatura.
+Demonstramos o uso de operadores lógicos (&& neste caso) para combinar condições.
+Utilizamos outro exemplo com um operador ternário para gerar uma saudação com base no período do dia.
+Você pode ajustar os valores das variáveis para ver como o comportamento da estrutura condicional muda. -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estruturas Condicionais em JavaScript</title>
+</head>
+<body>
+
+  <h1>Estruturas Condicionais em JavaScript</h1>
+
+  <script>
+    // Exemplo de variáveis
+    let temperatura = 25;
+
+    // Estrutura condicional - if, else if, else
+    if (temperatura > 30) {
+      document.write("<p>Está muito quente lá fora!</p>");
+    } else if (temperatura >= 20 && temperatura <= 30) {
+      document.write("<p>O clima está agradável.</p>");
+    } else {
+      document.write("<p>Está um pouco frio lá fora.</p>");
+    }
+
+    // Outro exemplo com operador ternário
+    let periodoDoDia = "manhã";
+    let saudacao = (periodoDoDia === "manhã") ? "Bom dia!" : "Boa tarde ou boa noite!";
+    document.write("<p>" + saudacao + "</p>");
+  </script>
+
+</body>
+</html>

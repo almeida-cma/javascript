@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Neste exemplo:
+
+Declaramos uma variável de string (mensagem) e a exibimos.
+Demonstramos variáveis com tipos específicos (inteiro e decimal).
+Criamos variáveis booleanas.
+Utilizamos um array para armazenar diferentes frutas.
+Declaramos uma constante (PI) para representar o valor de PI.
+Alteramos o valor de uma variável e tentamos alterar o valor de uma constante (comentada para evitar erro). -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo JavaScript para Iniciantes</title>
+</head>
+<body>
+
+  <h1>Declarações em JavaScript</h1>
+
+  <script>
+    // Declaração de variáveis
+    let mensagem = "Olá, mundo!";
+    document.write("<p>1. " + mensagem + "</p>");
+
+    // Declaração de variáveis com tipos específicos
+    let numeroInteiro = 10;
+    let numeroDecimal = 3.14;
+    document.write("<p>2. Número inteiro: " + numeroInteiro + ", Número decimal: " + numeroDecimal + "</p>");
+
+    // Declaração de boolean
+    let isVerdadeiro = true;
+    let isFalso = false;
+    document.write("<p>3. Verdadeiro: " + isVerdadeiro + ", Falso: " + isFalso + "</p>");
+
+    // Declaração de arrays
+    let frutas = ["Maçã", "Banana", "Laranja"];
+    document.write("<p>4. Array de frutas: " + frutas.join(", ") + "</p>");
+
+    // Declaração de constantes
+    const PI = 3.1415;
+    document.write("<p>5. Valor de PI (constante): " + PI + "</p>");
+
+    // Alterando valor de variável
+    mensagem = "Nova mensagem!";
+    document.write("<p>6. Mensagem alterada: " + mensagem + "</p>");
+
+    // Tentativa de alterar valor de constante (irá gerar um erro)
+    // PI = 3.14; // Descomente esta linha para ver o erro no console do navegador
+  </script>
+
+</body>
+</html>
